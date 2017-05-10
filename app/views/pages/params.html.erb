@@ -1,0 +1,17 @@
+<h1>This page will say your first name from params</h1>
+Welcome <%= @name.upcase %> 
+<br>
+<% if @name[0] == "a" %>
+Hey, youre name starts with the first letter of alphabet
+<% end %>
+<br><br>
+<p>And now its time for some fun! Lets play a guessing game. Well choose a number, you take a guess and try to get it.<br>
+<% if @guess == @number %>
+  Sweet guess. U got it! You won the game!
+  <% elsif @guess < @number %>
+  Good guess, but no. Guess higher.
+  <% elsif @guess > @number %>
+  Good guess, but no. Guess lower.
+  <% end %>
+  <!-- type this to win the game
+  http://localhost:3000/params?name=avrohom&guess=45 -->
